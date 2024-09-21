@@ -1,0 +1,27 @@
+<app-footer></app-footer>
+
+<!-- Data Binding -->
+
+  <!-- Interpolacao. Forma de usar dados de variáveis no html -->
+    {{ name }}
+    
+    <!-- Property Binding. Usar o "[]" ao redor da source significa que o endereco 
+    a ser passado vai ser uma variavel
+    <img [src]="randomUrl" />  tirar essa linha do bloco comentario vai mostrar uma foto 
+    -->
+    
+    <p></p>
+    
+    
+    <!-- Event Binding. Usando "()" ao redor da funcao "click" faz o valor ser lido como JavaScript 
+    (tem o mesmo uso da funcao onclick). -->
+    <!-- One- way Binding-->
+    
+    <button (click)="teste()">Clica em mim</button>
+    
+    <!-- Two way Binding-->   
+     <p></p>
+    {{ name1() }}
+    
+    <button (click)="contagem()">Clica em mim</button>
+    
