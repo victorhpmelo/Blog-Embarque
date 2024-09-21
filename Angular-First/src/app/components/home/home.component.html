@@ -19,9 +19,29 @@
     
     <button (click)="teste()">Clica em mim</button>
     
-    <!-- Two way Binding-->   
+    <!-- Two way Bindingm-->
+     <!-- Fazendo com que a contagem fique dinamica e apareca na tela atualizando o valor-->   
      <p></p>
     {{ name1() }}
     
     <button (click)="contagem()">Clica em mim</button>
+
+
+    <!-- Forma de usar condicionais sem importar o "CommonModule"-->
+    @if (value) {
+      <h2>O numero é: {{cont()}}</h2>
+    }
+
+    <!-- Forma usando "*ngIf" e importando "CommonModule" -->
+    <h2 *ngIf="value"> Usando ngIf</h2>
+
+    <!-- Usando "for" para iteração de uma array/lista-->
+      @for (item of lista; track lista) {
+        <p>{{item}}</p>
+      }
+      <!-- Condição do que mostrar para caso a lista esteja vazia-->
+      @empty {
+        <p>Vazio</p>
+      }
+
     
