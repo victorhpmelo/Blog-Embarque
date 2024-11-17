@@ -3,12 +3,12 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'app-header',
   standalone: true,
   imports: [CommonModule,RouterModule],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.css'
 })
-export class FooterComponent {
+export class HeaderComponent {
 
 }
