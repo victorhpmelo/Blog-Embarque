@@ -1,15 +1,17 @@
-<input type="text" [(ngModel)]="newPostTitle" placeholder="Conteúdo da Postagem ">
-<button (click)="addPost()">Postar</button>
+<input type="text" [(ngModel)]="newPostTitle" placeholder="Conteúdo da Postagem">
+<button (click)="addPost()">
+  {{ editPostId ? 'Salvar Alterações' : 'Postar' }}
+</button>
 
 <div *ngIf="showError" class="error-message">
- Por favor insira o conteúdo da postagem
+  Por favor, insira o conteúdo da postagem.
 </div>
-  
-  <ul>
-    <li *ngFor="let post of posts">
-      {{ post.title }}
-      <p>Posted on: {{ post.timestamp | date:'short' }}</p>
-      <button (click)="editPost(post.id)">Edit</button>
-    <button (click)="deletePost(post.id)">Delete</button>
+
+<ul>
+  <li *ngFor="let post of posts">
+    {{ post.title }}
+    <p>Postado em: {{ post.timestamp | date:'short' }}</p>
+    <button (click)="editPost(post.id)">Editar</button>
+    <button (click)="deletePost(post.id)">Deletar</button>
   </li>
 </ul>
