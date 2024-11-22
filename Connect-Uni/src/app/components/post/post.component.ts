@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 import { Post } from './post.model';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
-  styleUrls: ['./post.component.css']
+  styleUrls: ['./post.component.scss']
 })
 export class PostComponent {
+  postFormControl = new FormControl('', [Validators.required]);
+
   newPostTitle = '';
   posts: Post[] = [];
   showError = false;
