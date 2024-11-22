@@ -1,0 +1,33 @@
+.sidebar-container {
+  display:flex;
+  height: 100vh;
+  position: relative;
+  margin: 0;
+}
+
+
+.hover-area {
+  height: 100%;
+  background-color: #5f00c0;
+  color: white;
+  overflow: hidden;
+  transition: width 0.3s;
+  position: relative;
+  z-index: 2;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.example-events {
+  height: 200px;
+  overflow: auto;
+  border: 1px solid #555;
+}
+
+.hover-area.closed{
+  display: none;
+}
+

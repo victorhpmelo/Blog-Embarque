@@ -1,0 +1,8 @@
+<div class="sidebar-container">
+  <div class="hover-area" (mouseenter)="openSidenav()" (mouseleave)="closeSidenav()">
+
+    <div class="sidebar" [@openClose]="opened ? 'open' : 'closed'">
+      Sidenav content
+    </div>
+  </div>
+</div>
