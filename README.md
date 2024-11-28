@@ -30,7 +30,7 @@ ng serve
 ```
 ### Iniciar servidor local do Angular
 ```
-json-server --watch db.json
+npm run db
 ```
 ### Para que o banco de dados funcione
 
