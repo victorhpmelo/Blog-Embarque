@@ -17,22 +17,23 @@ Um app para simular um Blog que tem como funcionalidades Planejadas :
 ##Pré-requisitos 
 Ter baixado o **Node.js**
 ## Comandos Importantes
+### Mudar o diretório para o do projeto
 ```
 cd Connect-uni
 ```
-### Mudar o diretório para o do projeto
+### Instalar os pacotes necessários
 ```
 npm install 
 ```
-### Instalar os pacotes necessários
+### Iniciar servidor local do Angular
 ```
 ng serve
 ```
-### Iniciar servidor local do Angular
+### Para que o banco de dados funcione
 ```
 npm run db
 ```
-### Para que o banco de dados funcione
+
 
 
 
