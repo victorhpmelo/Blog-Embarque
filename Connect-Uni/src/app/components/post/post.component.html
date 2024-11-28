@@ -1,37 +1,40 @@
-<div class="post-container">
-  <form class="postForm">
-    <mat-form-field class="inputPost">
-      <mat-label id="postLabel">Post</mat-label>
-      <input type="text" [(ngModel)]="newPostTitle" matInput [formControl]="postFormControl" placeholder="Insira seu Post">
+<div class="container">
+  <app-menu></app-menu>
+  <div class="post-container">
+    <form class="postForm">
+      <mat-form-field class="inputPost" hideRequiredMarker>
+        <mat-label id="postLabel">Post</mat-label>
+        <input class="inputField" type="text" [(ngModel)]="newPostTitle" matInput [formControl]="postFormControl" placeholder="Insira seu Post">
+        <mat-error *ngIf="postFormControl.hasError('required')">Preencha o campo com seu <strong>post</strong></mat-error>
+      </mat-form-field>
       <button class="bts" (click)="addPost()" mat-mini-fab aria-label="Example icon button with a menu icon">
-        <mat-icon>send</mat-icon>
+        <mat-icon class="sendPostBt">send</mat-icon>
       </button>
-      <mat-error *ngIf="postFormControl.hasError('required')">Preencha o campo com seu <strong>post</strong></mat-error>
-    </mat-form-field>
-  </form>
-  <ul>
-    <div class="posts-header">
-      <mat-icon matListItemIcon>inbox</mat-icon>
-      <span mat-subheader>Posts</span>
-    </div>
-    <li class="postList" *ngFor="let post of posts">
-      <mat-list-item>
-        <mat-card class="card" appearance="outlined">
-          <mat-card-header>
-            <mat-card-title matListItemTitle class="titlePost">{{post.title}}</mat-card-title>
-            <mat-card-subtitle matListItemLine class="infoPost">Data: {{post.timestamp | date:'dd/MM/YY'}}</mat-card-subtitle>
-            <mat-card-subtitle matListItemLine class="infoPost"> Horário: {{post.timestamp | date: 'HH:MM:SS'}}</mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-actions align="end">
-            <button class="bts" (click)="editPost(post.id)" mat-mini-fab aria-label="Example icon button with a menu icon">
-              <mat-icon>edit</mat-icon>
-            </button>
-            <button class="bts" (click)="deletePost(post.id)" mat-mini-fab aria-label="Example icon button with a menu icon">
-              <mat-icon>delete</mat-icon>
-            </button>
-          </mat-card-actions>
-        </mat-card>
-      </mat-list-item>
-    </li>
-  </ul>
+    </form>
+    <ul>
+      <div class="posts-header">
+        <mat-icon matListItemIcon>inbox</mat-icon>
+        <span mat-subheader>Posts</span>
+      </div>
+      <li class="postList" *ngFor="let post of posts">
+        <mat-list-item>
+          <mat-card class="card" appearance="outlined">
+            <mat-card-header>
+              <mat-card-title matListItemTitle class="titlePost">{{post.title}}</mat-card-title>
+              <mat-card-subtitle matListItemLine class="infoPost">Data: {{post.timestamp | date:'dd/MM/YY'}}</mat-card-subtitle>
+              <mat-card-subtitle matListItemLine class="infoPost"> Horário: {{ post.timestamp | date: 'HH:mm:ss'}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-actions align="end">
+              <button class="postBt" (click)="editPost(post.id)" mat-mini-fab aria-label="Example icon button with a menu icon">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button class="postBt" (click)="deletePost(post.id)" mat-mini-fab aria-label="Example icon button with a menu icon">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </mat-card-actions>
+          </mat-card>
+        </mat-list-item>
+      </li>
+    </ul>
+  </div>
 </div>

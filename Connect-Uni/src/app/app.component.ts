@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { PostModule } from './components/post/post.module';
-import { FooterModule } from './components/footer/footer.module';
-import { MenuComponent } from './components/menu/menu.component';
-import { SidenavOpenCloseExample } from './components/sidenav-open-close-example/sidenav-open-close-example.component';
+import { LoginModule } from './components/login/login.module';
+import { MenuModule } from './components/menu/menu.module';
 
 
 @Component({
@@ -11,10 +10,9 @@ import { SidenavOpenCloseExample } from './components/sidenav-open-close-example
   standalone: true,
   imports: [
     RouterOutlet,
-    MenuComponent,
+    MenuModule,
     PostModule,
-    FooterModule,
-    SidenavOpenCloseExample,
+    LoginModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
