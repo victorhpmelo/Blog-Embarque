@@ -1,0 +1,56 @@
+
+.container{
+  width: auto;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.cardContainer{
+  display: flex;
+  width: 50%;
+  height: 50%;
+  align-self: center;
+  border: none;
+}
+
+.inputLogin{
+  width: 100%;
+ filled-label-text-color: #ffabf3;
+}
+
+#mat-mdc-error-0{
+  color: #990000;
+}
+
+.labelLogin{
+  color: #ffabf3;
+}
+
+.loginBt{
+  padding: 10%;
+  margin-top: 20%;
+}
+
+.tituloCard{
+  text-align: center;
+  color: #ffabf3;
+  font-family: "Jaro", sans-serif;
+  font-size: 60px;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+   margin-top: 5%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: auto;
+}
+
+label, input, button {
+  margin: 5px 0;
+}

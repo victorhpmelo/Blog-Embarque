@@ -5,7 +5,7 @@ import { Post } from '../post/post.model';
 @Component({
   selector: 'app-post-form',
   templateUrl: './post-form.component.html',
-  styleUrls: ['./post-form.component.css']
+  styleUrls: ['./post-form.component.scss']
 })
 export class PostFormComponent implements OnInit {
   @Output() postAdded = new EventEmitter<Post>();
@@ -30,6 +30,7 @@ export class PostFormComponent implements OnInit {
       const post: Post = {
         id: Math.random(),
         title,
+        timestamp: new Date(),
       }
     }
   }

@@ -1,0 +1,19 @@
+<div class="sidebar-container">
+  <div class="hover-area" (mouseenter)="openSidenav()" (mouseleave)="closeSidenav()">
+    <div class="sidebar" [@openClose]="opened ? 'open' : 'closed'">
+      <p class="fontJaro">
+        Menu
+      </p>
+      <nav>
+        <a class="sideBt" mat-fab extended href="post">
+          <mat-icon >home</mat-icon>
+          <p *ngIf="opened" class="fontJaro">Início</p>
+        </a>
+        <a class="sideBt" mat-fab extended href="profile">
+          <mat-icon >person</mat-icon>
+          <p *ngIf="opened" class="fontJaro">Perfil</p>
+        </a>
+      </nav>
+    </div>
+  </div>
+</div>

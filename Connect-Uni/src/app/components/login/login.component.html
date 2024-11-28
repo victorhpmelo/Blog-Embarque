@@ -1,0 +1,16 @@
+
+<div class="container">
+  <mat-card appearance="outlined" class="cardContainer">
+    <mat-card-content class="tituloCard">ConnectUni</mat-card-content>
+  <form class="loginForm" (ngSubmit)="onSubmit()">
+    <mat-form-field class="inputLogin" hideRequiredMarker>
+      <mat-label class="labelLogin"   >Insira seu Nome de Usuário</mat-label>
+      <input type="text" id="username"  matInput [formControl]="loginFormControl" [(ngModel)]="username" name="username" required  placeholder="ex. anotador123">
+      @if (loginFormControl.hasError('required')) {
+        <mat-error>O campo está <strong>vazio</strong> </mat-error>
+      }
+    </mat-form-field>
+    <button type="submit" class="loginBt" mat-flat-button>Entrar</button>
+  </form>
+</mat-card>
+</div>
